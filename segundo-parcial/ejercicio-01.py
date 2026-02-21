@@ -82,26 +82,11 @@ stats.probplot(datos, plot=plt)
 plt.title("Gráfico Q-Q para normalidad")
 
 plt.tight_layout()
-plt.show()
+plt.savefig('distribution_plots.png')
 
 # Interpretación adicional
 print("\n--- Interpretación de Resultados ---")
 if(shapiro_test.pvalue > 0.05):
     print("Los datos son normales, por lo que técnicas paramétricas son válidas.")
 else:
-    print("Los datos NO son normales. Concidere pruebas no parametricas.")    
-    
-    # Histograma + curva de densidad
-    plt.subplot(1, 2, 1)
-    sns.histplot(datos, kde=True, color='blue', bins=6)
-    plt.title("Distribución del grosor de terciado")
-    plt.xlabel('Grosor (mm)')
-    plt.ylabel('Frecuencia')
-    
-    # Gráfico Q-Q
-    plt.subplot(1, 2, 2)
-    stats.probplot(datos, plot=plt)
-    plt.title("Gráfico Q-Q para normalidad")
-
-plt.tight_layout()
-plt.show()
+    print("Los datos NO son normales. Concidere pruebas no parametricas.")
