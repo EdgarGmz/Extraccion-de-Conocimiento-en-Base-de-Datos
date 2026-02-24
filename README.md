@@ -32,19 +32,34 @@ Para evitar duplicidad, utilizamos un único entorno virtual en la raíz del pro
 ```bash
 # Crear el entorno virtual en la raíz
 python3 -m venv .venv
+```
 
-# Activar el entorno
+### **Activar el entorno**
+
+**Linux/macOS:**
+```bash
 source .venv/bin/activate
+```
+
+**Windows:**
+```bash
+.venv\Scripts\activate
+```
+
 ```
 
 ## 2. Instalación de Dependencias
 
-Instala todas las librerías necesarias (pandas, numpy, scikit-learn, matplotlib, seaborn, etc.) desde el archivo de requerimientos unificado:
+Instala todas las librerías necesarias desde el archivo de requerimientos unificado:
+
 
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
+
+**Librerías incluidas:** pandas, numpy, scikit-learn, matplotlib, seaborn, y más.
+
 
 ## 3. Ejecución de Ejercicios
 
