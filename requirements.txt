@@ -1,8 +1,9 @@
-pandas
-numpy
-scikit-learn
-matplotlib
-seaborn
 jupyter
-sqlalchemy
+matplotlib
+mysql-connector-python
 notebook
+numpy
+pandas
+scikit-learn
+seaborn
+sqlalchemy
