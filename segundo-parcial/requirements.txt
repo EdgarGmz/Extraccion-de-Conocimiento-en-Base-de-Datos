@@ -6,3 +6,4 @@ seaborn
 jupyter
 sqlalchemy
 notebook
+statsmodels

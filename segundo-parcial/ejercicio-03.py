@@ -12,7 +12,7 @@ except FileNotFoundError:
 	print(f"Error: El archivo '{file_path}' no fue encontrado.")
 	exit()
 except pd.errors.EmptyDataError:
-	print("Error: El archivo CSV está vacío.")
+	print("Error: El archivo CSV estávacío.")
 	exit()
 
 # Validar que las columnas necesarias existan
@@ -46,7 +46,10 @@ plt.legend(loc="upper left")
 plt.grid()
 output_path = os.path.join(os.path.dirname(__file__), 'diagrama_dispersion.png')
 plt.savefig(output_path)
-plt.show()
+if 'agg' in plt.get_backend().lower():
+	print(f"Gráfico guardado en: {output_path}")
+else:
+	plt.show()
 
 # Interpretación del Gráfico
 # Posible correlación positiva. Si los puntos tienden a subir hacia la 

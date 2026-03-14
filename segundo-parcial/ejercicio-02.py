@@ -4,6 +4,12 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from statsmodels.stats.power import TTestIndPower
 
+def mostrar_grafico():
+    if 'agg' in plt.get_backend().lower():
+        plt.close()
+    else:
+        plt.show()
+
 # Datos proporcionados
 datos = np.array([
     1.18, 1.18, 1.18, 1.18, 1.19, 1.19, 1.19, 1.20, 1.20, 1.20, 1.20, 1.20,
@@ -85,7 +91,7 @@ stats.probplot(datos, dist="norm", plot=plt)
 plt.title("Gráfico Q-Q")
 
 plt.tight_layout()
-plt.show()
+mostrar_grafico()
 
 # 7. Interpretación 
 print("\n--- Interpretación de resultados ---")

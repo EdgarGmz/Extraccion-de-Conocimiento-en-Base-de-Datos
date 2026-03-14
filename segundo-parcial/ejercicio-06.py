@@ -2,6 +2,12 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import os
 
+def mostrar_grafico():
+	if 'agg' in plt.get_backend().lower():
+		plt.close()
+	else:
+		plt.show()
+
 # Cargar datos desde el archivo CSV
 # Se espera un archivo 'datagraficas.csv' con las siguientes
 # columnas: years_plot1, dolares, productos, cantidad, tiempo_algebra,
@@ -82,4 +88,4 @@ output_path = os.path.join(os.path.dirname(__file__), 'ejercicio_06_multiples.pn
 plt.savefig(output_path)
 print(f"Gráfico guardado en: {output_path}")
 
-plt.show()
+mostrar_grafico()

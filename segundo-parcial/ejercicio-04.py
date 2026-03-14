@@ -31,4 +31,7 @@ plt.ylabel('Notas de estudio')
 plt.legend()
 plt.savefig('diagrama_dispersion2.png') 
 plt.grid() 
-plt.show()
+if 'agg' in plt.get_backend().lower():
+	print("Gráfico guardado en: diagrama_dispersion2.png")
+else:
+	plt.show()

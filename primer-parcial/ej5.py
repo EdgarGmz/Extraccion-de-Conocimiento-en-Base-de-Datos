@@ -6,6 +6,12 @@
 # Libreria
 import matplotlib.pyplot as plt 
 
+def mostrar_grafico():
+	if 'agg' in plt.get_backend().lower():
+		plt.close()
+	else:
+		plt.show()
+
 # Datos
 years = [2019, 2020, 2021, 2022]
 sales_a = [14, 18, 23, 32]
@@ -24,4 +30,4 @@ plt.xticks(years)
 # Mostrar leyenda, cuadricula y figura
 plt.legend()
 plt.grid()
-plt.show()
+mostrar_grafico()

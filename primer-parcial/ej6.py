@@ -7,6 +7,12 @@
 # Librería
 import matplotlib.pyplot as plt
 
+def mostrar_grafico():
+	if 'agg' in plt.get_backend().lower():
+		plt.close()
+	else:
+		plt.show()
+
 # Datos lenguajes de programación  mayor demanda 2022
 porcentajes = [14,12,11,10,8]
 lenguajes = ["Python", "C", "Java", "C++", "C#"]
@@ -25,4 +31,4 @@ plt.legend()
 # Guardar automático
 plt.savefig("diagrama_barras.png")
 
-plt.show()
+mostrar_grafico()

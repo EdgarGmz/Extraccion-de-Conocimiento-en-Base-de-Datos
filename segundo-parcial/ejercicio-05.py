@@ -13,6 +13,12 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import os
 
+def mostrar_grafico():
+	if 'agg' in plt.get_backend().lower():
+		plt.close()
+	else:
+		plt.show()
+
 # Creamos la figura 
 fig = plt.figure(figsize=(10, 7))
 
@@ -48,4 +54,4 @@ plt.savefig(output_path)
 print(f"Gráfico guardado en: {output_path}")
 
 # Mostramos el gráfico
-plt.show()
+mostrar_grafico()
