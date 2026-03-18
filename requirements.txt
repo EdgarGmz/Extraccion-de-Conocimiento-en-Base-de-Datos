@@ -3,6 +3,7 @@ matplotlib
 mysql-connector-python
 notebook
 numpy
+openpyxl
 pandas
 scikit-learn
 seaborn
